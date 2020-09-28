@@ -26,7 +26,7 @@ const LinearSearch = () => {
 	}
 
   const search = () => {
-    let { arr, size, key, elemColor, keyFound } = arrDetails;
+    let { arr, size, key, elemColor } = arrDetails;
     for (let i = 0; i < size; ++i) {
       elemColor[i] = "white";
       animations.push(JSON.stringify(elemColor));
