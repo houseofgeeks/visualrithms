@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import LinearScearch from "./components/linearSearch/LinearSearch";
+import BinarySearch from "./components/binarySearch/BinarySearch";
+import LinearSearch from "./components/linearSearch/LinearSearch";
 
 function App() {
   return (
@@ -18,14 +19,16 @@ function App() {
             }}
           >
             <div style={{ display: "inline-block", margin: "5px" }}>
-              <Link style={{color: "#1b1"}} to="/linearsearch">LinearScearch</Link>
+              <Link style={{color: "#1b1", margin: "5px"}} to="/linearsearch">LinearSearch</Link>
+              <Link style={{color: "#1b1", margin: "5px"}} to="/binarysearch">BinarySearch</Link>
             </div>
           </div>
         </nav>
         <center>
           <Switch>
             <Route exact strict path="/"/>
-            <Route exact strict path="/linearsearch" component={LinearScearch} />
+            <Route exact strict path="/linearsearch" component={LinearSearch} />
+            <Route exact strict path="/binarysearch" component={BinarySearch} />
           </Switch>
         </center>
       </Router>
