@@ -2,7 +2,10 @@ import React from "react";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import BinarySearch from "./components/binarySearch/BinarySearch";
 import LinearSearch from "./components/linearSearch/LinearSearch";
-
+ window.addEventListener('load', () =>{
+  const preload = document.querySelector('.preload')
+  preload.classList.add('preload-finish')
+ })
 function App() {
   return (
     <div className="App">

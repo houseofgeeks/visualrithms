@@ -1,0 +1,26 @@
+.preload{
+    position:fixed;
+    top: 0;
+    width:100%;
+    height: 100vh;
+    background: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.preload-finish{
+    opacity: 0;
+    pointer-events: none;
+}
+img{
+    height: 200px;
+    display: block;
+}
+
+#preloadText{
+    position: absolute;
+    color:green;
+    top: 75%;
+    
+
+}
