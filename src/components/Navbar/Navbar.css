@@ -1,0 +1,27 @@
+.Navbar {
+	width: 100%;
+	background-color: #d4c824;
+	height: 4rem;
+}
+.container {
+	max-width: 1100px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 0.8rem;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+a {
+	text-decoration: none;
+}
+.title {
+	font-size: 2rem;
+}
+.navItems {
+	font-size: 1.5rem;
+}
+.linear {
+	margin-right: 1rem;
+}
