@@ -2,7 +2,6 @@ import React from "react";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import BinarySearch from "./components/binarySearch/BinarySearch";
 import LinearSearch from "./components/linearSearch/LinearSearch";
-
 function App() {
   return (
     <div className="App">
