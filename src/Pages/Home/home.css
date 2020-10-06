@@ -1,20 +1,24 @@
-.container {
+.App .container {
 	max-width: 1100px;
 	width: 100%;
 	display: grid;
 	grid-template-columns: auto auto;
+	align-items: center;
+	margin: 1rem;
+	gap: 2rem;
 }
 .caption {
 	color: white;
-	margin: 1rem;
 	padding-right: 2rem;
+	display: grid;
 }
 .visualImg {
-	max-width: 400px;
 	width: 100%;
+	max-width: 400px;
 	height: 400px;
 }
 .actionButton {
+	justify-self: start;
 	margin-top: 1.5rem;
 	padding: 15px;
 	background-color: #d4c824;
@@ -23,4 +27,15 @@
 	border: none;
 	border-radius: 0.5rem;
 	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.App .container {
+		grid-template-columns: 1fr;
+		margin-top: 3rem;
+	}
+	
+	.visualImg {
+		margin: 0 auto;
+	}
 }

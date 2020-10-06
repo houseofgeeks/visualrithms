@@ -13,7 +13,7 @@ function Navbar() {
 					<Link to="/linearsearch" className="linear">
 						LinearSearch
 					</Link>
-					<Link to="/binarysearch">BinarySearch</Link>
+					<Link to="/binarysearch" className="binary">BinarySearch</Link>
 				</div>
 			</div>
 		</div>
