@@ -1,17 +1,14 @@
 .Navbar {
 	width: 100%;
 	background-color: #d4c824;
-	height: 4rem;
 }
-.container {
+.Navbar .container {
 	max-width: 1100px;
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 0.8rem;
+	padding: 0.8rem;
 	margin: 0 auto;
-	flex-wrap: wrap;
 }
 a {
 	text-decoration: none;
@@ -21,7 +18,13 @@ a {
 }
 .navItems {
 	font-size: 1.5rem;
+	text-align: end;
 }
-.linear {
-	margin-right: 1rem;
+
+.navItems a {
+	display: inline-block;
+}
+
+.binary {
+	margin-left: 1rem;
 }
