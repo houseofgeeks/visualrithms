@@ -19,6 +19,9 @@ function Navbar() {
           <Link to="/sorting" className="nav-link">
             Sorting
           </Link>
+          <Link to="/breadthfirstsearch" className="nav-link">
+            BreadthFirstSearch
+          </Link>
         </div>
       </div>
     </div>

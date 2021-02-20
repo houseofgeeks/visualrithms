@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./Pages/Home/home";
 import BinarySearch from "./components/binarySearch/BinarySearch";
 import LinearSearch from "./components/linearSearch/LinearSearch";
+import BreadthFirstSearch from "./components/breadthFirstSearch/breadthFirstSearch.jsx";
+
 import Sort from "./components/sorting/Sort";
 function App() {
 	return (
@@ -16,6 +18,8 @@ function App() {
 					<Route exact strict path="/linearsearch" component={LinearSearch} />
 					<Route exact strict path="/binarysearch" component={BinarySearch} />
 					<Route exact strict path="/sorting" component={Sort} />
+					<Route exact strict path="/breadthfirstsearch" component={BreadthFirstSearch} />
+
 				</Switch>
 			</div>
 		</Router>
