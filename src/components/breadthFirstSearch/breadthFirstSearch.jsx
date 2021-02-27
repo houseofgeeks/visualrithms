@@ -13,7 +13,6 @@ const BreadthFirstSearch = () => {
   });
 
   const animations = [];
-  const path       = [];
   const pathcolor  = [];
   const mapped     = [];
 
@@ -199,9 +198,7 @@ const BreadthFirstSearch = () => {
             }
           }
           queue.shift();
-        }
-        
-      
+        }   
     updateArrDetails({arr: arrDetails.arr,
       rows: arrDetails.rows,
       cols: arrDetails.cols,
@@ -209,19 +206,17 @@ const BreadthFirstSearch = () => {
       end:arrDetails.end,
       sel:arrDetails.sel,
       elemColor: elc,
-    keyFound: kf});
-    return;
+      keyFound: kf});
+      return kf;
   };
 
   const pathfind = () =>{
     var pelc = arrDetails.elemColor;
         var pth = arrDetails.end;
-        path.push(arrDetails.end);
         while(true){
           for(var i=0;i<mapped.length;i++){
             if(mapped[i][1][0]===pth[0] && mapped[i][1][1]===pth[1]){
               pth = mapped[i][0];
-              path.push(mapped[i][0]);
               pelc[pth[0]][pth[1]] = "red";
               pathcolor.push(JSON.stringify(pelc));
             }
@@ -260,33 +255,36 @@ const BreadthFirstSearch = () => {
   }
 
   const animate = () => {
-    search();
-    pathfind();
-    setTimeout(animepath,animations.length );    
-    for (let i = 0; i < animations.length; ++i) {
-      setTimeout(() => {
-        let animation = JSON.parse(animations[i]);
-        updateArrDetails({
-          arr: arrDetails.arr,
-					rows: arrDetails.rows,
-          cols: arrDetails.cols,
-          start:arrDetails.start,
-          end:arrDetails.end,
-          sel:arrDetails.sel,
-          elemColor: [...animation],
-					keyFound: arrDetails.keyFound
-				});
-        updateArrDetails({arr: arrDetails.arr,
-          rows: arrDetails.rows,
-          cols: arrDetails.cols,
-          start:arrDetails.start,
-          end:arrDetails.end,
-          sel:arrDetails.sel,
-          elemColor: [...animation],
-        keyFound: arrDetails.keyFound});
-			}, i );
-      
-		}
+    var found = search();
+    if(found){
+      pathfind();
+    }
+      console.log(arrDetails.keyFound);
+      setTimeout(animepath,animations.length );    
+      for (let i = 0; i < animations.length; ++i) {
+        setTimeout(() => {
+          let animation = JSON.parse(animations[i]);
+          updateArrDetails({
+            arr: arrDetails.arr,
+            rows: arrDetails.rows,
+            cols: arrDetails.cols,
+            start:arrDetails.start,
+            end:arrDetails.end,
+            sel:arrDetails.sel,
+            elemColor: [...animation],
+            keyFound: arrDetails.keyFound
+          });
+          updateArrDetails({arr: arrDetails.arr,
+            rows: arrDetails.rows,
+            cols: arrDetails.cols,
+            start:arrDetails.start,
+            end:arrDetails.end,
+            sel:arrDetails.sel,
+            elemColor: [...animation],
+          keyFound: arrDetails.keyFound});
+        }, i );
+        
+      }
   };
 
   return (
@@ -381,7 +379,6 @@ const BreadthFirstSearch = () => {
       >
         Reset
       </button>
-			{/*arrDetails.keyFound && <h1 style={{color: "white"}}>Key Found!</h1>*/}
     </center></>
   );
 };
