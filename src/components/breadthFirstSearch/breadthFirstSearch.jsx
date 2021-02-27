@@ -259,7 +259,6 @@ const BreadthFirstSearch = () => {
     if(found){
       pathfind();
     }
-      console.log(arrDetails.keyFound);
       setTimeout(animepath,animations.length );    
       for (let i = 0; i < animations.length; ++i) {
         setTimeout(() => {
